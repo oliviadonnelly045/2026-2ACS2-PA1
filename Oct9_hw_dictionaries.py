@@ -35,7 +35,7 @@ def change_class(schedule):
 def drop_class(schedule):
 
     remove_A_Block = input("do remove your A Block? (y/n)")
-        if y then  .pop(A_Block)
+        if y then  schedule.pop(A_Block)
     remove_B_Block = input("do remove your B Block? (y/n)")
         if y then  .pop(B_Block)
     remove_C_Block = input("do remove your C Block? (y/n)")
