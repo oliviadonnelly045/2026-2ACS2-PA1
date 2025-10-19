@@ -1,7 +1,23 @@
 '''
-Continuation of classwork, graded on completion/effort.
+Author: Olivia Donnelly
+Program title: Create Your Mod Schedule
+Description: Program that allows user to add, drop, 
+and change their schedule for each mod in a year. They 
+can then choose to view their entire schedule.
 
-Write a small program that allows people to add, drop, and change their mod 2 schedule.
+WWW: I was able to create a working program that allows the user to add, 
+drop, and changes classes in their mod schedule. I used dictionaries to 
+organize the classes in each mod and added error handling in case the user 
+did not enter the valid actions. Finally, I added the option to edit or view 
+the schedule at the beginning of the program so the user can view their 
+updated schedule.
+
+
+EBI: I had a hard time figuring out how to print the final schedule with there 
+right formatting. Eventually, I figured it out and learned how to fix this 
+problem in the future. I also learned how to print multiple dictionaries at 
+a time by using a list.
+
 '''
 
 mod1 = {
