@@ -64,11 +64,11 @@ full_schedule = [mod1, mod2, mod3, mod4, mod5, mod6, mod7, D_Block]
 #parameters: a dictionary called schedule
 #returns: a schedule with an added class
 def add_class(schedule):
-    schedule_add = input("What block would you like to add to (A,B,C,E)?").lower()
+    schedule_add = input("What block would you like to add to (A,B,C,E)? ").lower()
     valid_actions = ["a","b","c","e"]
     while schedule_add not in valid_actions:
         print("Error. Please pick A, B, C, or E.")
-        schedule_add = input("What block would you like to add to (A,B,C,E)?").lower()
+        schedule_add = input("What block would you like to add to (A,B,C,E)? ").lower()
     if schedule_add == "a":
         schedule_A = input("Enter your A Block ").lower()
         schedule ["A Block"] = schedule_A
@@ -86,11 +86,11 @@ def add_class(schedule):
 #parameters: a dictionary called schedule
 #returns: a schedule with a changed, preexisting class
 def change_class(schedule):
-    schedule_change = input("What block would you like to change to (A,B,C,E)?").lower()
+    schedule_change = input("What block would you like to change to (A,B,C,E)? ").lower()
     valid_actions = ["a","b","c","e"]
     while schedule_change not in valid_actions:
         print("Error. Please pick A, B, C, or E.")
-        schedule_change = input("What block would you like to change to (A,B,C,E)?").lower()
+        schedule_change = input("What block would you like to change to (A,B,C,E)? ").lower()
     if schedule_change == "a":
         schedule_changeA = input (f"Enter the new class for A Block: ")
         schedule ["A Block"]= schedule_changeA
@@ -108,11 +108,11 @@ def change_class(schedule):
 #parameters: a dictionary called schedule
 #returns: a schedule with a removed class
 def drop_class(schedule):
-    schedule_drop = input("What block would you like to drop (A,B,C,E)?").lower()
+    schedule_drop = input("What block would you like to drop (A,B,C,E)? ").lower()
     valid_actions = ["a","b","c","e"]
     while schedule_drop not in valid_actions:
         print("Error. Please pick A, B, C, or E.")
-        schedule_drop = input("What block would you like to drop (A,B,C,E)?").lower()
+        schedule_drop = input("What block would you like to drop (A,B,C,E)? ").lower()
     if schedule_drop == "a":
         schedule["A Block"] = ""
     elif schedule_drop == "b":
@@ -121,15 +121,15 @@ def drop_class(schedule):
         schedule["C Block"] = ""
     elif schedule_drop == "e":
         schedule["E Block"] = ""
-        return schedule
+    return schedule
 
 
 def add_dblock(dschedule):
-    d_add = input ("What season would you like to add (fall, winter, spring)").lower()
-    valid_actions = ["fall, winter, spring"]
+    d_add = input ("What season would you like to add (fall, winter, spring) ").lower()
+    valid_actions = ["fall", "winter", "spring"]
     while d_add not in valid_actions:
         print("Error. Please pick fall, winter, or spring.")
-        d_add = input ("What season would you like to add (fall, winter, spring)").lower()
+        d_add = input ("What season would you like to add (fall, winter, spring) ").lower()
     if d_add == "fall":
         d_addfall = input (f"Enter the class for your fall D Block: ")
         dschedule ["Fall"]= d_addfall
@@ -138,15 +138,15 @@ def add_dblock(dschedule):
         dschedule ["Winter"]= d_addwinter
     elif d_add == "spring":
         d_addspring = input (f"Enter the class for your spring D Block: ")
-        d_add ["Spring"]= d_addspring
+        dschedule ["Spring"]= d_addspring
     return dschedule
 
 def change_dblock(dschedule):
-    d_change = input ("What season would you like to change (fall, winter, spring)").lower()
-    valid_actions = ["fall, winter, spring"]
+    d_change = input ("What season would you like to change (fall, winter, spring) ").lower()
+    valid_actions = ["fall", "winter", "spring"]
     while d_change not in valid_actions:
         print("Error. Please pick fall, winter, or spring.")
-        d_change = input ("What season would you like to change (fall, winter, spring)").lower()
+        d_change = input ("What season would you like to change (fall, winter, spring) ").lower()
     if d_change == "fall":
         d_changefall = input (f"Enter the new class for your fall D Block: ")
         dschedule ["Fall"]= d_changefall
@@ -160,11 +160,11 @@ def change_dblock(dschedule):
 
 
 def drop_dblock(dschedule):
-    d_drop = input ("What season would you like to drop (fall, winter, spring)").lower()
-    valid_actions = ["fall, winter, spring"]
+    d_drop = input ("What season would you like to drop (fall, winter, spring) ").lower()
+    valid_actions = ["fall", "winter", "spring"]
     while d_drop not in valid_actions:
         print("Error. Please pick fall, winter, or spring.")
-        d_drop = input ("What season would you like to drop (fall, winter, spring)").lower()
+        d_drop = input ("What season would you like to drop (fall, winter, spring) ").lower()
     if d_drop == "fall":
         dschedule["Fall"] = ""
     elif d_drop == "winter":
@@ -189,20 +189,20 @@ def main():
             print("Error. Please pick edit or view.")
             user_option = input("What would you like to do? (edit or view) ").lower()
         if user_option == "edit":
-            user_choice = input("What would you like to edit? (mod schedule or D Blocks)").lower()
+            user_choice = input("What would you like to edit? (mod schedule or D Blocks) ").lower()
             valid_actions = ["mod schedule","d blocks"]
             while user_choice not in valid_actions:
                 print("Error. Please pick mod schedule or D Blocks.")
                 user_choice = input("What would you like to do?").lower()
         
             if user_choice == "mod schedule":
-                mod_choice = input("What mod would you like to edit?").lower()
+                mod_choice = input("What mod would you like to edit? ").lower()
                 valid_actions = ["1", "2", "3", "4", "5", "6", "7"]
-                edit_choice = input("What would you like to do? (add, drop, or change)").lower()
+                edit_choice = input("What would you like to do? (add, drop, or change) ").lower()
                 valid_actions = ["add","drop","change"]
                 while edit_choice not in valid_actions:
                     print("Error. Please pick add, drop, change, or exit.")
-                    edit_choice = input("What would you like to do? (add, drop, or change)").lower()
+                    edit_choice = input("What would you like to do? (add, drop, or change) ").lower()
 
                 if mod_choice == "1":
                     if edit_choice == "add":
@@ -266,11 +266,15 @@ def main():
             ask = input("Would you like to keep going (yes/no) ")
             if ask == "no":
                 dontstop = False
+                for part in full_schedule:
+                    for block, clas in part.items():
+                        print(f"{block}: {clas}")
+                    print ("_"*50)
 
         elif user_option == "view":
-            for mod in full_schedule:
-                for block in mod:
-                    print(f"{block}")
+            for part in full_schedule:
+                for block, clas in part.items():
+                    print(f"{block}: {clas}")
                 print ("_"*50)
 
     print("Thanks for stopping by!")
