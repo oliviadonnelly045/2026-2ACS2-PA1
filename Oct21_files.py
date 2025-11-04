@@ -8,11 +8,19 @@ my_schedule = open("schedule.txt", "a") #append mode...
 my_schedule.write("\nAdding content!") #...adds to the end of the file contents.
 
 '''
-To create a new file in Puthon, just open one that doesn't exist in an edit mode or x mode.
+To create a new file in Python, just open one that doesn't exist in an edit mode or x mode.
 '''
 
-new_file = open("new_file.txt", "w") #just creatses new file
+new_file = open("new_file.txt", "x") #just creatses new file
 new_file.write("HI")
+
+new_file = open("new_file.txt", "a") #creates new file or adds if already exists
+new_file.write("HI")
+
+new_file.close()
+
+new_file.write("Hello?")
+
 
 """#write a while loop that looks for "Mod 2"
 #Then write a for loop that prints out Mod 2 schedule
